@@ -1,29 +1,31 @@
-# mic
+# mic-ts
 
-## Project setup
-```
-yarn install
-```
+Simple example of audio recording with Vue.JS, TypeScript and MediaRecorder
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+Allow the page to use the microphone and talk.
+The record stops after 9 seconds and the download of the file 'test.webm' will be available after a short time. 
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+## Run the sample
 
-### Run your tests
-```
-yarn run test
+### Docker
+
+You can pull the image from Docker Hub and run with the following command
+
+```console
+$ docker run --name mic-ts -p 8080:80 filario/mic-ts:v1.0.0 
 ```
 
-### Lints and fixes files
-```
-yarn run lint
+Alternatively you can build it and run without downloading the 
+
+```console
+$ docker build -t mic-ts . 
+$ docker run --name mic-ts -p 8080:80 mic-ts
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### NPM
+
+Use npm to run the application
+
+```console
+$ npm run serve
+```
